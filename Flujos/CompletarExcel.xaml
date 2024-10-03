@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1233,1273</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1233,2010</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CompletarExcel_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,7 +102,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CompletarExcel" sap:VirtualizedContainerService.HintSize="592,1208" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CompletarExcel" sap:VirtualizedContainerService.HintSize="592,1945" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Centro" />
       <Variable x:TypeArguments="x:String" Name="NombreCentro" />
@@ -178,7 +178,7 @@
               <OutArgument x:TypeArguments="x:String">[ArchivoGarantia]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[Fecha.Replace("/","-")+" "+Centro+" Garantias.pdf"]</InArgument>
+              <InArgument x:TypeArguments="x:String">[Fecha.Replace("/","-")+" "+Centro+" Garantías.pdf"]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
@@ -216,35 +216,13 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <If Condition="[Centro.StartsWith(&quot;0&quot;)]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Email.Contains(&quot;;&quot;)]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="530,466" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,312" sap2010:WorkflowViewState.IdRef="Sequence_2">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:GenerateDataTable ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" ColumnSeparators=";" DataTable="[dt_Excel]" DisplayName="Generar tabla de datos" sap:VirtualizedContainerService.HintSize="354,224" sap2010:WorkflowViewState.IdRef="GenerateDataTable_2" Input="[&quot;'&quot;+Centro+&quot;;&quot;+NombreCentro+&quot;;&quot;+Email+&quot;;&quot;+Fecha+&quot;;&quot;+NotaGarantia+&quot;;&quot;+ArchivoGarantia+&quot;;&quot;+NotaPartes+&quot;;&quot;+ArchivoPartes+&quot;;&quot;+in_Mensaje]" />
-        </Sequence>
-      </If.Then>
-      <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,312" sap2010:WorkflowViewState.IdRef="Sequence_3">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:GenerateDataTable ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" ColumnSeparators=";" DataTable="[dt_Excel]" DisplayName="Generar tabla de datos" sap:VirtualizedContainerService.HintSize="354,224" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[Centro+&quot;;&quot;+NombreCentro+&quot;;&quot;+Email+&quot;;&quot;+Fecha+&quot;;&quot;+NotaGarantia+&quot;;&quot;+ArchivoGarantia+&quot;;&quot;+NotaPartes+&quot;;&quot;+ArchivoPartes+&quot;;&quot;+in_Mensaje]" />
-        </Sequence>
-      </If.Else>
-    </If>
-    <If Condition="[Email.Contains(&quot;;&quot;)]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="530,466" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
@@ -269,6 +247,34 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <If Condition="[Centro.StartsWith(&quot;0&quot;)]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="530,794" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,312" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GenerateDataTable ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" ColumnSeparators=";" DataTable="[dt_Excel]" DisplayName="Generar tabla de datos" sap:VirtualizedContainerService.HintSize="354,224" sap2010:WorkflowViewState.IdRef="GenerateDataTable_2" Input="[&quot;'&quot;+Centro+&quot;;&quot;+NombreCentro+&quot;;&quot;+Email+&quot;;&quot;+Fecha+&quot;;&quot;+NotaGarantia+&quot;;&quot;+ArchivoGarantia+&quot;;&quot;+NotaPartes+&quot;;&quot;+ArchivoPartes+&quot;;&quot;+in_Mensaje]" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,312" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GenerateDataTable ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" CSVParsing="False" ColumnSeparators=";" DataTable="[dt_Excel]" DisplayName="Generar tabla de datos" sap:VirtualizedContainerService.HintSize="354,224" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[Centro+&quot;;&quot;+NombreCentro+&quot;;&quot;+Email+&quot;;&quot;+Fecha+&quot;;&quot;+NotaGarantia+&quot;;&quot;+ArchivoGarantia+&quot;;&quot;+NotaPartes+&quot;;&quot;+ArchivoPartes+&quot;;&quot;+in_Mensaje]" />
         </Sequence>
       </If.Else>
     </If>

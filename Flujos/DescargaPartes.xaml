@@ -6,6 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1668,2794</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DescargaPartes_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -107,7 +108,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DescargaPartes" sap:VirtualizedContainerService.HintSize="1916,2608" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DescargaPartes" sap:VirtualizedContainerService.HintSize="1678,2729" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Entorno" />
       <Variable x:TypeArguments="x:String" Name="F_Hasta" />
@@ -121,7 +122,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="1560,303" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="1616,303" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -175,23 +176,23 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilizar Navegador Firefox: Nueva pestaña" sap:VirtualizedContainerService.HintSize="1560,2282" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="09acbba6-3bca-4a5f-8c14-7437996f95bf" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilizar Navegador Firefox: Nueva pestaña" sap:VirtualizedContainerService.HintSize="1616,2338" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="09acbba6-3bca-4a5f-8c14-7437996f95bf" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="1526,2042" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="1582,2098" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximizar ventana" sap:VirtualizedContainerService.HintSize="1492,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <uix:NGoToUrl DisplayName="Ir a URL" sap:VirtualizedContainerService.HintSize="1492,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[URL_Partes]" Version="V3" />
-            <uix:NCheckState DisplayName="Comprobar estado de aplicación 'PARTES'" sap:VirtualizedContainerService.HintSize="1492,1591" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="09acbba6-3bca-4a5f-8c14-7437996f95bf" Timeout="10" Version="V4">
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximizar ventana" sap:VirtualizedContainerService.HintSize="1520,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <uix:NGoToUrl DisplayName="Ir a URL" sap:VirtualizedContainerService.HintSize="1520,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[URL_Partes]" Version="V3" />
+            <uix:NCheckState DisplayName="Comprobar estado de aplicación 'PARTES'" sap:VirtualizedContainerService.HintSize="1520,1619" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="09acbba6-3bca-4a5f-8c14-7437996f95bf" Timeout="30" Version="V4">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Aparece el destino" sap:VirtualizedContainerService.HintSize="988,1342" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Aparece el destino" sap:VirtualizedContainerService.HintSize="1016,1370" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -295,12 +296,13 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="No aparece el destino" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="No aparece el destino" sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <Throw DisplayName="Lanzar excepción" Exception="[New BusinessRuleException(&quot;Parte no encontrado.&quot;)]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
